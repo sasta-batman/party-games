@@ -2,21 +2,35 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 
-export default function CharadesGame() {
-  const [movies, setMovies] = useState([]);
-  const [currentMovie, setCurrentMovie] = useState(null);
+// 1. Define the interface for your Movie data
+interface Movie {
+  id: number;
+  name: string;
+  hint: string;
+}
 
-  // 1. Fetch movies when the page loads
+export default function CharadesGame() {
+  // 2. Add <Movie[]> to tell TypeScript this array will hold Movies
+  const [movies, setMovies] = useState<Movie[]>([]);
+  
+  // 3. Add <Movie | null> to allow null initially
+  const [currentMovie, setCurrentMovie] = useState<Movie | null>(null);
+
   useEffect(() => {
     async function fetchMovies() {
       const { data, error } = await supabase.from('movies').select('*');
-      if (error) console.log('error', error);
-      else setMovies(data);
+      if (error) {
+        console.log('error', error);
+      } else {
+        // 4. Cast the data to the correct type if needed
+        setMovies(data as Movie[]);
+      }
     }
     fetchMovies();
   }, []);
-  // 2. Pick a random movie
+
   const getNextMovie = () => {
+    if (movies.length === 0) return;
     const randomIndex = Math.floor(Math.random() * movies.length);
     setCurrentMovie(movies[randomIndex]);
   };
