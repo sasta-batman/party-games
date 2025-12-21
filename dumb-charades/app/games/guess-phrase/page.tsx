@@ -10,7 +10,7 @@ interface Question {
   answer: string;
 }
 
-export function GuessThePhraseGame({ onBackHome }: GameProps) {
+export default function GuessThePhraseGame({ onBackHome }: GameProps) {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [userAnswer, setUserAnswer] = useState('');

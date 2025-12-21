@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { DumbCharadesGame } from './games/dumb-charades/page';
-import { GuessThePhraseGame } from './games/guess-phrase/page';
+import DumbCharadesGame from './games/dumb-charades/page';
+import GuessThePhraseGame from './games/guess-phrase/page';
 import { getAllGames } from './games/registry';
 
 type CurrentPage = 'home' | 'dumb-charades' | 'guess-phrase';

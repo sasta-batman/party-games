@@ -11,7 +11,7 @@ interface Movie {
   category: string;
 }
 
-export function DumbCharadesGame({ onBackHome }: GameProps) {
+export default function DumbCharadesGame({ onBackHome }: GameProps) {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [currentMovie, setCurrentMovie] = useState<Movie | null>(null);
   const [category, setCategory] = useState('bollywood');
