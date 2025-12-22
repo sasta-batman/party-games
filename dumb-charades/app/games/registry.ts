@@ -25,6 +25,18 @@ export const GAMES: Record<string, GameConfig> = {
     },
     textColor: 'text-purple-100',
   },
+  'hum-the-song': {
+    id: 'hum-the-song',
+    title: 'Hum The Song',
+    description: 'Hum popular songs and let your team guess them!',
+    color: {
+      from: 'from-green-600',
+      to: 'to-green-800',
+      hover_from: 'hover:from-green-500',
+      hover_to: 'hover:to-green-700',
+    },
+    textColor: 'text-green-100',
+  },
 };
 
 export const getGameConfig = (gameId: string): GameConfig | null => {

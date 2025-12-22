@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import DumbCharadesGame from './games/dumb-charades/page';
 import GuessThePhraseGame from './games/guess-phrase/page';
+import HumTheSongGame from './games/hum-the-song/page';
 import { getAllGames } from './games/registry';
 
-type CurrentPage = 'home' | 'dumb-charades' | 'guess-phrase';
-
+type CurrentPage = 'home' | 'dumb-charades' | 'guess-phrase' | 'hum-the-song';
 function HomePage({ onSelectGame }: { onSelectGame: (game: CurrentPage) => void }) {
   const games = getAllGames();
 
@@ -46,6 +46,7 @@ export default function Home() {
       {currentPage === 'home' && <HomePage onSelectGame={handleSelectGame} />}
       {currentPage === 'dumb-charades' && <DumbCharadesGame onBackHome={handleBackHome} />}
       {currentPage === 'guess-phrase' && <GuessThePhraseGame onBackHome={handleBackHome} />}
+      {currentPage === 'hum-the-song' && <HumTheSongGame onBackHome={handleBackHome} />}
     </>
   );
 }
