@@ -151,7 +151,7 @@ export default function GuessThePhraseGame({ onBackHome }: GameProps) {
                 <div className="mb-8">
                   <p className="text-sm text-slate-500 text-center mb-4">Question #{questionCount}</p>
                   <div
-                    className="text-3xl font-bold text-center bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text text-transparent leading-relaxed [&_span]:inline-block [&_span]:align-middle"
+                    className="text-3xl font-sans font-bold text-center mb-8"
                     dangerouslySetInnerHTML={{ __html: currentQuestion?.question || '' }}
                   />
                 </div>
