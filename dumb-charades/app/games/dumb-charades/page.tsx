@@ -41,21 +41,21 @@ export default function DumbCharadesGame({ onBackHome }: GameProps) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-slate-900 p-4 relative overflow-hidden">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-slate-900 p-4 sm:pt-16 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="fixed top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl -z-10"></div>
       <div className="fixed bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl -z-10"></div>
       
       <button
         onClick={onBackHome}
-        className="absolute top-6 left-6 bg-white/80 hover:bg-white px-5 py-2 rounded-lg transition-all duration-300 border border-slate-200 text-slate-700 z-10"
+        className="sm:absolute sm:top-6 sm:left-6 bg-white/80 hover:bg-white px-5 py-2 rounded-lg transition-all duration-300 border border-slate-200 text-slate-700 z-10"
       >
         ← Back
       </button>
 
       <div className="text-center mb-10 z-10">
-        <h1 className="text-6xl font-black mb-3 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Dumb Charades</h1>
-        <p className="text-slate-600 text-lg">Act out the movie and let your team guess!</p>
+        <h1 className="text-4xl sm:text-6xl font-black mb-3 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Dumb Charades</h1>
+        <p className="text-slate-600 text-base sm:text-lg">Act out the movie and let your team guess!</p>
       </div>
       
       {/* Category Toggle */}
@@ -81,7 +81,7 @@ export default function DumbCharadesGame({ onBackHome }: GameProps) {
         <div className="relative bg-white p-12 rounded-3xl shadow-lg border border-slate-200 text-center">
           {currentMovie ? (
             <div className="space-y-6">
-              <div className="text-6xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text">
+              <div className="text-4xl sm:text-6xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text">
                 {currentMovie.name}
               </div>
               <div className="h-1 w-16 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>

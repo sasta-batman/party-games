@@ -103,7 +103,7 @@ export default function GuessThePhraseGame({ onBackHome }: GameProps) {
       <div className="flex flex-col items-center justify-center min-h-screen bg-white text-slate-900 p-4">
         <button
           onClick={onBackHome}
-          className="absolute top-6 left-6 bg-white/80 hover:bg-white px-5 py-2 rounded-lg transition-all duration-300 border border-slate-200 text-slate-700 z-10"
+          className="sm:absolute sm:top-6 sm:left-6 bg-white/80 hover:bg-white px-5 py-2 rounded-lg transition-all duration-300 border border-slate-200 text-slate-700 z-10"
         >
           ← Back
         </button>
@@ -118,14 +118,14 @@ export default function GuessThePhraseGame({ onBackHome }: GameProps) {
   const isGameOver = false; // You can adjust this logic based on your game rules
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-slate-900 p-4 relative overflow-hidden">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-slate-900 p-4 sm:pt-16 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="fixed top-0 left-0 w-96 h-96 bg-gradient-to-br from-violet-500/10 to-transparent rounded-full blur-3xl -z-10"></div>
       <div className="fixed bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full blur-3xl -z-10"></div>
 
       <button
         onClick={onBackHome}
-        className="absolute top-6 left-6 bg-white/80 hover:bg-white px-5 py-2 rounded-lg transition-all duration-300 border border-slate-200 text-slate-700 z-10"
+        className="sm:absolute sm:top-6 sm:left-6 bg-white/80 hover:bg-white px-5 py-2 rounded-lg transition-all duration-300 border border-slate-200 text-slate-700 z-10"
       >
         ← Back
       </button>
@@ -133,8 +133,8 @@ export default function GuessThePhraseGame({ onBackHome }: GameProps) {
       <div className="w-full max-w-2xl z-10">
         <div className="flex justify-between items-center mb-12">
           <div>
-            <h1 className="text-6xl font-black mb-2 bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Guess The Phrase</h1>
-            <p className="text-slate-700 text-lg">Decode the clues and find the answer!</p>
+            <h1 className="text-4xl sm:text-6xl font-black mb-2 bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Guess The Phrase</h1>
+            <p className="text-slate-700 text-base sm:text-lg">Decode the clues and find the answer!</p>
           </div>
           <div className="text-right bg-white border border-slate-200 p-4 rounded-2xl shadow-sm">
             <p className="text-sm text-slate-500">Questions</p>
@@ -223,8 +223,8 @@ export default function GuessThePhraseGame({ onBackHome }: GameProps) {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-purple-500 rounded-3xl blur-xl opacity-10"></div>
               <div className="relative bg-white rounded-3xl p-8 text-center shadow-lg border border-slate-200">
-                <h2 className="text-5xl font-black mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">🎉 Great Job!</h2>
-                <p className="text-2xl text-slate-700 mb-8 font-light">
+                <h2 className="text-3xl sm:text-5xl font-black mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">🎉 Great Job!</h2>
+                <p className="text-lg sm:text-2xl text-slate-700 mb-8 font-light">
                   You scored <span className="font-bold text-violet-600">{score}</span> out of <span className="font-bold text-violet-600">{questionCount}</span>
                 </p>
                 <button
